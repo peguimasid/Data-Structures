@@ -2,7 +2,7 @@
 <p>
 </p>
 
-> Data Structures: <br /><br /> - Singly Linked Lists <br /> - Doubly Linked Lists <br /> - Stacks + Queues <br /> - Binary Search Trees <br /> - Tree Traversal <br /> - Binary Heaps <br /> - Hash Tables <br /> - Graphs <br /> - Graphs <br /> - Graphs Traversal 
+> Data Structures: <br /><br /> - Singly Linked Lists <br /> - Doubly Linked Lists <br /> - Stacks + Queues <br /> - Binary Search Trees <br /> - Tree Traversal <br /> - Binary Heaps <br /> - Hash Tables <br /> - Graphs <br /> - Graphs Traversal 
 
 ## Install
 
