@@ -15,7 +15,7 @@ git clone https://github.com/peguimasid/Data-Structures.git
 👤 **Guilhermo Masid**
 
 * Github: [@peguimasid](https://github.com/peguimasid)
-* LinkedIn: [@guilhermo-masid-494677b8](https://linkedin.com/in/guilhermo-masid-494677b8)
+* LinkedIn: [@guilhermo-masid](https://linkedin.com/in/guilhermo-masid-494677b8)
 
 ## Show your support
 
