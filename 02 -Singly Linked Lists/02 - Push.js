@@ -36,4 +36,14 @@ list.push('my')
 
 console.log(list)
 
+// tail before>>> Node { val: 'hi', next: null }
+// tail middle>>> Node { val: 'hi', next: Node { val: 'there', next: null } }
+// tail after>>> Node { val: 'there', next: null }
 
+// HEAD after>>> Node { val: 'hi', next: Node { val: 'there', next: null } }
+
+// tail before>>> Node { val: 'there', next: null }
+// tail middle>>> Node { val: 'there', next: Node { val: 'my', next: null } }
+// tail after>>> Node { val: 'my', next: null }
+
+// HEAD after>>> Node { val: 'hi', next: Node { val: 'there', next: Node { val: 'my', next: null } } }
