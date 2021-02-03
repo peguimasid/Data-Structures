@@ -1,3 +1,5 @@
+// REMOVE FIRST ITEM 
+
 // REMOVE END ITEM
 class Node {
   constructor(val) {
@@ -46,6 +48,15 @@ class SinglyLinkedList {
       }
       return current.val
   }
+
+  shift() {
+    if(!this.length) return undefined
+    let removedItem = this.head
+    this.head = removedItem.next
+    this.length--
+    if(!this.length) this.tail = null
+    return removedItem
+  }
 }
 
 let list = new SinglyLinkedList()
@@ -54,4 +65,8 @@ list.push('hi')
 list.push('there')
 list.push('ndsns')
 
-console.log(list.pop())
+console.log(list.shift())
+console.log(list.shift())
+console.log(list.shift())
+
+console.log(list)
