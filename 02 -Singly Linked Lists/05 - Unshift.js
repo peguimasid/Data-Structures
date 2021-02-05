@@ -1,4 +1,4 @@
-// REMOVE FIRST ITEM 
+// ADD ITEM TO BEGINNING
 class Node {
   constructor(val) {
     this.val = val
@@ -55,16 +55,28 @@ class SinglyLinkedList {
     if(!this.length) this.tail = null
     return removedItem
   }
+
+  unshift(val) {
+    const newNode = new Node(val)
+    if(!this.length) {
+      this.head = newNode
+      this.tail = newNode
+    } else {
+      newNode.next = this.head
+      this.head = newNode
+    }
+  
+    this.length++
+    return this
+  }
 }
 
 let list = new SinglyLinkedList()
 
-list.push('hi')
-list.push('there')
-list.push('ndsns')
+// list.push('hi')
+// list.push('there')
+// list.push('ndsns')
 
-console.log(list.shift())
-console.log(list.shift())
-console.log(list.shift())
+list.unshift('newfirst')
 
 console.log(list)
