@@ -71,7 +71,7 @@ class SinglyLinkedList {
   }
 
   get(index) {
-    if(!index || index < 0 || index >= this.length) return null
+    if(index < 0 || index >= this.length) return null
     
     let current = this.head
     let counter = 0
