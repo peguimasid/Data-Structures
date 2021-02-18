@@ -126,10 +126,10 @@ class SinglyLinkedList {
     let node = this.head
     this.head = this.tail
     this.tail = node
-    
+
     let prev = null;
     let next = null;
-    
+
     while(node) {
       next = node.next
       node.next = prev
