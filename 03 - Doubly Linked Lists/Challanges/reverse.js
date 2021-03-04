@@ -54,7 +54,17 @@ class DoublyLinkedList{
       current = current.next
     }
 
-    return this.list
+    let currentTail = this.tail
+
+    while(currentTail.next) {
+      let temp = currentTail.next
+      currentTail.next = currentTail.prev
+      currentTail.prev = temp
+
+      currentTail = currentTail.prev
+    }
+
+    return this
   }
 }
 
