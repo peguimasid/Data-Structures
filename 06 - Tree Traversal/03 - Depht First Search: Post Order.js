@@ -79,13 +79,13 @@ class BinarySearchTree {
     }
   }
 
-  DepthFirstSearchInOrder() {
+  DepthFirstSearchPostOrder() {
     let result = []
 
     function traverse(node) {
       if (node.left) traverse(node.left)
-      result.push(node.value)
       if (node.right) traverse(node.right)
+      result.push(node.value)
     }
 
     traverse(this.root)
@@ -105,5 +105,5 @@ tree.insert(8)
 
 tree.insert(20)
 
-console.log(tree.DepthFirstSearchInOrder())
+console.log(tree.DepthFirstSearchPostOrder())
 
