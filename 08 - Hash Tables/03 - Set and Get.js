@@ -23,7 +23,7 @@ class HashTable {
     for (let i = 0; i < hashTable[position].length; i++) {
       const itemKey = hashTable[position][i][0];
 
-      if (itemKey === key) return hashTable[position][i]
+      if (itemKey === key) return hashTable[position][i][1]
     }
 
     return undefined
@@ -44,8 +44,12 @@ class HashTable {
 
 const hashTable = new HashTable()
 
-hashTable.set('cyan', '#069')
-// hashTable.set('pinsssssdk', '#069')
-hashTable.set('pink', '#FFC0CB')
+hashTable.set('maroon', '#800000')
+hashTable.set('yellow', '#FFFF00')
+hashTable.set('olive', '#808000')
+hashTable.set('salmon', '#FA8072')
+hashTable.set('lightcoral', '#F08080')
+hashTable.set('mediumvioletred', '#C71585')
+hashTable.set('plum', '#DDA0DD')
 
-console.log(hashTable.get('cyan'))
+console.log(hashTable.get('salmon'))
