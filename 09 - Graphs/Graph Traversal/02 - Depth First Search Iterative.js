@@ -34,18 +34,19 @@ class Graph {
   DepthFirstSearch(vertex) {
     let list = this.adjacencyList;
     let result = [];
+    let stack = [vertex];
     let visited = {};
 
-    function traverse(vtx) {
-      if (!vtx.length) return;
-      result.push(vtx);
-      visited[vtx] = true;
-      for (let child of list[vtx]) {
-        if (!visited[child]) traverse(child);
+    while (stack.length) {
+      let vtx = stack.pop();
+      if (!visited[vtx]) {
+        result.push(vtx);
+        visited[vtx] = true;
+        for (let child of list[vtx]) {
+          if (!visited[child]) stack.push(child);
+        }
       }
     }
-
-    traverse(vertex);
 
     return result;
   }
@@ -53,19 +54,19 @@ class Graph {
 
 const graph = new Graph();
 
-graph.addVertex("A");
-graph.addVertex("B");
-graph.addVertex("C");
-graph.addVertex("D");
-graph.addVertex("E");
-graph.addVertex("F");
+graph.addVertex('A');
+graph.addVertex('B');
+graph.addVertex('C');
+graph.addVertex('D');
+graph.addVertex('E');
+graph.addVertex('F');
 
-graph.addEdge("A", "B");
-graph.addEdge("A", "C");
-graph.addEdge("B", "D");
-graph.addEdge("C", "E");
-graph.addEdge("D", "E");
-graph.addEdge("D", "F");
-graph.addEdge("E", "F");
+graph.addEdge('A', 'B');
+graph.addEdge('A', 'C');
+graph.addEdge('B', 'D');
+graph.addEdge('C', 'E');
+graph.addEdge('D', 'E');
+graph.addEdge('D', 'F');
+graph.addEdge('E', 'F');
 
-console.log(graph.DepthFirstSearch("A"));
+console.log(graph.DepthFirstSearch('A')); // [ 'A', 'B', 'D', 'E', 'C', 'F' ]
